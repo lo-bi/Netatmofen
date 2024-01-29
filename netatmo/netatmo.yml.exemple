@@ -1,0 +1,10 @@
+---
+client_id: 1234
+client_secret: abcd
+refresh_token: 1234|6789
+device_id: 70:xx:xx:xx:xx:xx
+include_station_name: false
+lat_ne: 47.294
+lon_ne: 3.2720
+lat_sw: 36.2923
+lon_sw: 2.2691

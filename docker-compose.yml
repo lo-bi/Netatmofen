@@ -16,7 +16,9 @@ services:
       - ./influxdb:/var/lib/influxdb2 
 
   telegraf:
-    image: telegraf
+    build: 
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - influxdb
     container_name: telegraf
@@ -34,6 +36,7 @@ services:
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf 
       - ./telegraf/scripts:/etc/telegraf/telegraf.d
+      - ./netatmo:/etc/netatmo
 
   grafana:
     image: grafana/grafana
